@@ -1,0 +1,7 @@
+mutation UserSettingForm($nodeId: ID!, $data: UserDataUpdateInput!){
+    updateUserDataCollection(filter: {nodeId: {eq: $nodeId}}, set: $data) {
+        records {
+            nodeId
+        }
+    }
+}

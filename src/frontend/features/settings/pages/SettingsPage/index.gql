@@ -1,0 +1,13 @@
+query settingsPage($id: UUID!) {
+    userDataCollection(filter: {id: {eq: $id}}) {
+        edges {
+            node {
+                nodeId
+                name
+                email
+                image
+                userId
+            }
+        }
+    }
+}
